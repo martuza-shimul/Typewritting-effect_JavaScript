@@ -1,43 +1,49 @@
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
 }
 
 .main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    height: 100vh;
-    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.6)),url('./image.jpg');
-    background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)),
+    url("./image.jpg");
+  background-size: cover;
 }
-
+.main > h1 {
+  font-size: 42px;
+  margin: 10px 0;
+  /* flex: 1; */
+}
 .typing {
-    margin-left: 10px;
-    color: rgb(120, 245, 82);
-    /* position: relative; */
+  margin-left: 10px;
+  font-size: 50px;
+  color: rgb(120, 245, 82);
+  /* transition: all 1.5s ease-in; */
+  /* position: relative; */
 }
 
-.typing::after{
-    content: "";
-    /* position: absolute; */
-    width: 1px;
-    height: 95%;
-    margin-left: 5px;
-    border-right: 2px solid #fff;
-    animation: blink 0.6s infinite ease;
-
+.typing::after {
+  content: "";
+  /* position: absolute; */
+  width: 1px;
+  height: 95%;
+  margin-left: 5px;
+  border-right: 2px solid #fff;
+  animation: blink 0.6s infinite ease;
 }
 
 @keyframes blink {
-    0%{
-        opacity: 0;
-    }
-    100%{
-        opacity: 1;
-    }
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
